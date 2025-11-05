@@ -1,0 +1,18 @@
+CS 310 - w11 Containerizing an Application
+
+By Kaylee Hinton
+
+## What process did you follow for creating the dockerfile?
+I started by finding a simple flask application from the Flask Quickstart documentation
+that simply displays "Hello World!" when ran. Next to create the Dockerfile I first used
+an official lightweight image from python for the base. Then I created a working directory
+with /app and then copied the flask app to it. Then to install flask, I had it run
+pip install Flask to make sure the dependencies was available to be used. Next, I exposed port
+5000 to host the container. Lastly, I specified the command to automatically run it when the 
+container starts.
+
+
+## What docker commands did you use to run the image?
+I used the command "docker build -t flask-app" to create the image.
+Then i used the command "docker run -d -p 5000:5000 --name flask-container flask-app"
+to run the container.
